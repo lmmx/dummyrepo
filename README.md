@@ -29,3 +29,15 @@ rm -rf webfiles/
 git stash pop
 ls webfiles/
 ```
+
+A file that has been committed and pushed to the `master` branch can be copied over
+to the `www` branch by the following routine (using the example of this README):
+
+```sh
+git checkout www
+rm README.md 
+git checkout --theirs master README.md
+gadd
+git commit -m "Update README; add stashed/popped files"
+git push origin www
+```
