@@ -4,6 +4,7 @@ dummyrepo to test checkout hook compatibility with gitpython
 
 - copy the script [here](https://gist.github.com/wizioo/c89847c7894ede628071)
   to `.git/hooks/post-checkout`
+  - Note: shebang line must refer to `bash` not `sh` (for me at least)
 - `chmod 755 .git/hooks/post-checkout`
 - `cp .gitignore.master .git/info/exclude` (or `git checkout www; git checkout master`)
 
